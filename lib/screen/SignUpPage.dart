@@ -19,12 +19,19 @@ class _SignUpPage extends State<SignUpPage>{
     // TODO: implement build
     return Scaffold(body: Center(child: Column(
       mainAxisAlignment:MainAxisAlignment.center,
-        children: <Widget>[
-      TextField(autofocus: true,decoration: new InputDecoration.collapsed(hintText: "Email"),
+      children: <Widget>[
+      Padding(padding: EdgeInsets.all(20),
+      child:
+      TextField(autofocus: true, decoration: new InputDecoration.collapsed(hintText: "Email"),
         onChanged: (text) {
           var value = text;
         },
-      )
+      )),
+         Padding( padding:EdgeInsets.fromLTRB(20,10,20,0),child: TextField(autofocus: true,obscureText: true,decoration: new InputDecoration.collapsed(hintText: "Password"),
+            onChanged: (text) {
+              var value = text;
+            },
+          ))
        ],),));
   }
 
